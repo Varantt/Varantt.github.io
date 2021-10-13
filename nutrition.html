@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Facts</title>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/Img/icon.png" />
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+                integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+            <link rel="shortcut icon" type="image/x-icon" href="assets/Img/icon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import"assets/CSS/menu.css";
+        
+        @media(max-width:576px){
+    
+    .zad span{
+        position:absolute;
+        /* left:295px !important; */
+        font-size:2.8rem;
+    }
+}
+
+    @media(max-width:768px){
+    
+    .zad span{
+        position:absolute;
+        left:230px !important;
+    }
+}
+
+@media(max-width:812px){
+    
+    .zad span{
+        position:relative;
+        left:38px !important;
+    }
+}
+
+#alert{
+    display:none;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu page</title>
+        <link rel="stylesheet" href="menu.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/Img/icon.png" />
+    </head>
+    
+    <body data-spy="scroll" data-target="#navbar-example3" data-offset="100">
+        <div class="whole">
+            <div>
+                <nav id="mainNav" class="navbar navbar-expand-md  navbar-dark fixed-top">
+                    <a class="navbar-brand " href="index.html"><i class="fas fa-pizza-slice rotate pl-0"></i>ORAS PIZZA</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item ">
+                                <a href="index.html" id="first-link" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="menu.html" id="first-link" class="nav-link">Menu</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link"> Nutrition facts</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="location.html" class="nav-link">Locations</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="reservation.html" class="nav-link">Reservations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="display-4 text-center zad">
+                <span class="border-bottom border-light">Nutrition facts</span>
+                <!-- <hr class="style d-none d-md-block" style="width:360px;position:absolute;top:250px;left:135px;"> -->
+            </div>
+        </div>
+    
+    
+        <div class="color">
+            <div id="alert">
+                <table border="1">
+                    <tr>
+                        <td>Carbs: <span class="rand"></span> </td>
+                        <td>Protein: <span class="rand"></span> </td>
+                        <td>Fiber: <span class="rand"></span> </td>
+                        <td>Cholesterol: <span class="rand"></span> </td>
+                        <td>Sodium: <span class="rand"></span> </td>
+                        <td>Calcium: <span class="rand"></span> </td>
+                        <td>Iron: <span class="rand"></span> </td>
+                        <td>Potassium: <span class="rand"></span> </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <section class="container-fluid" id="main">
+                <nav id="navbar-example3" class="navbar navbar-light navbar-expand-sm bg-black fixed-bottom ">
+                    <nav class="nav nav-pills navbar-nav flex-row">
+                        <a class="nav-link" href="#item-1">Pizzas</a>
+                        <a class="nav-link" href="#item-2">Pastas</a>
+                        <a class="nav-link" href="#item-3">Appetizers</a>
+                        <a class="nav-link" href="#item-4">Desserts</a>
+                        <a class="nav-link" href="#item-5">Beverages</a>
+                    </nav>
+                </nav>
+    
+                <div data-spy="scroll" data-target="#navbar-example3">
+                    <h3 id="item-1" class="text-center pt-5">Pizzas</h3>
+                    <hr class="style" style="width:200px;">
+                    <div class="row align-items-start">
+    
+                        <div class="col-lg-7 text-center  ">
+                            <!-- <img src="assets/Img/pizza1.jpg" alt=""> -->
+                            <div class="lists">
+                                <ul>
+                                    <li>Pizza Napoli........ <span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza Egg........ <span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza Pepperoni........ <span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza Vegeterian........ <span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza barbecue........ <span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-5 ">
+                            <img src="assets/Img/pi1.jpg" alt="pizza picture " class="img-fluid d-none d-lg-block">
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col-md-5 ">
+                            <img src="assets/Img/pi2.jpg" alt="pizza picture " class="img-fluid d-none d-lg-block">
+                        </div>
+                        <div class="col-lg-7 text-center ">
+                            <div class="lists">
+                                <ul>
+                                    <li>Pizza armenian........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza lebanese........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza special........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza Palermo........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pizza Milano........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3 id="item-2" class="text-center pt-5">Pastas</h3>
+                    <hr class="style" style="width:200px;">
+                    <div class="row align-items-start pt-5">
+                        <div class="col-lg-7 text-center  ">
+                            <div class="lists">
+                                <ul>
+                                    <li>Pasta
+                                        ORAS........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Alfredo........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Marinara........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Cheese........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Salad........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-md-5 ">
+                            <img src="assets/Img/pasta1.jpg" alt="pizza picture " class="img-fluid d-none d-lg-block">
+                        </div>
+    
+                    </div>
+                    <div class="row align-items-start ">
+                        <div class="col-md-5  ">
+                            <img src="assets/Img/pasta2.jpg" alt="pizza picture " class="img-fluid d-none d-lg-block">
+                        </div>
+                        <div class="col-lg-7 text-center  ">
+                            <div class="lists">
+                                <ul>
+                                    <li>Pasta
+                                        Chicken.......<span class="d-none d-sm-inline">......................................</span><div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        bonbon.......<span class="d-none d-sm-inline">......................................</span><div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Tuna.......<span class="d-none d-sm-inline">......................................</span><div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Milano.......<span class="d-none d-sm-inline">......................................</span><div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Pasta
+                                        Mayo.......<span class="d-none d-sm-inline">......................................</span><div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3 id="item-3" class="text-center pt-5">Appetizers</h3>
+                    <hr class="style" style="width:200px;">
+    
+                    <div class="row align-items-start">
+                        <div class="col-md-5">
+                            <img src="assets/Img/appetizer.jpg" class="img-fluid d-none d-lg-block" alt="beverages">
+                        </div>
+                        <div class="col-lg-7 text-center">
+                            <div class="lists">
+                                <ul>
+                                    <li>Barbecue wings........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>
+                                        French Fries........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Chicken Fries
+                                        ........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Mozzarella sticks
+                                        ........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                    <li>Onion rings........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="item-4" class="text-center pt-5">Desserts</h3>
+                <hr class="style" style="width:200px;">
+                <div class="row align-items-start">
+                    <div class="col-md-5">
+                        <img src="assets/Img/desserts.jpg" class="img-fluid d-none d-lg-block" alt="desserts">
+                    </div>
+                    <div class="col-lg-7 text-center">
+                        <div class="lists">
+                            <ul>
+                                <li>Cheese cake .........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Ice cream .........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Nutella Crepe.........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Sweet waffles .........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Fondant .........<span class="d-none d-sm-inline">......................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="item-5" class="text-center pt-5">Beverages</h3>
+                <hr class="style" style="width:200px;">
+                <div class="row align-items-start pb-5">
+                    <div class="col-md-5">
+                        <img src="assets/Img/beverage.jpg" class="img-fluid d-none d-lg-block" alt="beverage">
+                    </div>
+                    <div class="col-lg-7 text-center">
+                        <div class="lists">
+                            <ul>
+                                <li>
+                                    Cold&nbsp;&nbsp;
+                                    ........<span class="d-none d-sm-inline">.......................................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Beer&nbsp;&nbsp;
+                                    ........<span class="d-none d-sm-inline">.......................................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>Water&nbsp;
+                                    ........<span class="d-none d-sm-inline">.......................................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>
+                                    Coffee
+                                    ........<span class="d-none d-sm-inline">.......................................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                                <li>
+                                    Wine.........<span class="d-none d-sm-inline">............................................................</span> <div class="btn btn-md btn-dark" style="color:burlywood">Nutrition facts</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    
+        <div class="">
+            <footer class="mt-0">
+                <div class="row text-center  ">
+                    <div class="col-12">
+                        <h2>We are closed for now.&nbsp Back on february 8th!</h2>
+                        <strong id=contact>Contact Info</strong>
+                        <p>+96178949494 <br> ORASPIZZA@gmail.com</p>
+                        <strong>Follow us</strong><br>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="httpd://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <hr class="style d-none d-md-block ">
+                        <br>
+                        <p>&copy 2021</p>
+    
+                    </div>
+                </div>
+            </footer>
+        </div>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    
+        <script>
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $("#mainNav");
+                    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                });
+            });
+
+        </script>
+        <script>
+            $('body').scrollspy({ target: '#navbar-example3' });
+        </script>
+        <script>
+            var btn=document.querySelectorAll(".btn.btn-md.btn-dark");
+            var tbl=document.getElementById("alert");
+            var rand=document.querySelectorAll(".rand");
+            $(".btn.btn-md.btn-dark").on("click",function(){
+                // $("#alert").find(".rand").text(""+random()+"g");
+                for(var i=0;i<rand.length;i++){
+                    rand[i].textContent = ("" + random() + "g");
+                }
+                alert($("#alert").text());
+            });
+            function random(){
+                var r=Math.floor(Math.random()*50+1);
+                return r;
+            }
+            $(function () {
+                    AOS.init({
+                        duration: 1500,
+                    });
+                });
+            </script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+    
+    
+    
+    
+    </body>
+    
+    </html>
+</body>
+</html>

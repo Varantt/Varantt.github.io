@@ -1,0 +1,1 @@
+javaScript and jQuery are developed inside the HTML pages, hence why there are no javaScript files here.
